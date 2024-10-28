@@ -2,7 +2,6 @@ package com.example.Real_time.Polling.App.controller;
 
 import com.example.Real_time.Polling.App.model.Poll;
 import com.example.Real_time.Polling.App.service.PollService;
-import com.example.Real_time.Polling.App.service.WebSocketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,18 +9,16 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/polls")
+@RequestMapping("/polls")
 public class PollController {
     @Autowired
     private final PollService pollService;
-    @Autowired
-    private final WebSocketService webSocketService;
-
-
-    public PollController(PollService pollService, WebSocketService webSocketService) {
+    public PollController(PollService pollService) {
         this.pollService = pollService;
-        this.webSocketService = webSocketService;
     }
+
+
+
 
 
     @PostMapping("/create")

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Voting App</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+</head>
+<body>
+<h1>Real-Time Voting App</h1>
+
+<div id="voteSection">
+  <label for="voteOption"></label><input type="text" id="voteOption" placeholder="Enter your vote option">
+  <button onclick="castVote(document.getElementById('voteOption').value)">Submit Vote</button>
+</div>
+
+<div id="resultsSection">
+  <h2>Current Poll Results</h2>
+  <p id="pollResult">Waiting for results...</p>
+</div>
+<script src="js/fun.js"></script>
+</body>
+</html>

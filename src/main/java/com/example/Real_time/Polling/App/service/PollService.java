@@ -31,11 +31,11 @@ public class PollService {
             pollRepository.save(poll);
 
             // Broadcast updated poll data
-            messagingTemplate.convertAndSend("/topic/polls/" + pollId, poll);
-
+            messagingTemplate.convertAndSend("/topic/polls", poll);
             return Optional.of(poll);
         }
 
         return Optional.empty();
     }
+
 }
