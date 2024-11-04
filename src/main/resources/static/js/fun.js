@@ -8,7 +8,9 @@ function onMessageReceived(message) {
 
     function updatePollResult(result) {
         // Access the properties of the PollResult object
-        document.getElementById('pollResult').innerText = `Received: `+result;
+        document.getElementById('pollResult1').innerText = "Received: Java<br>"+result.options.java;
+        document.getElementById('pollResult2').innerText = "Received: Java<br>"+result.options.python;
+        document.getElementById('pollResult3').innerText = "Received: Java<br>"+result.options.javascript;
     }
 
 function onConnected() {
