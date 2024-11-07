@@ -29,9 +29,9 @@ While the concept may resemble HTTP-based communication, WebSocket-based impleme
 
 **1. Clone the Repository**
 
-git clone https://github.com/WhoDoesFluttershyLike/URL-Shortening-Service.git
+git clone https://github.com/WhoDoesFluttershyLike/Real-time-Polling-App.git
 
-cd URL-Shortening-Service
+cd Real-time-Polling-App
 
 **2. Install Dependencies**
 
